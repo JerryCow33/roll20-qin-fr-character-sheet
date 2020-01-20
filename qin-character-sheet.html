@@ -203,35 +203,35 @@
 					&#28779; Feu :
 					<input type="hidden" name="attr_feuname" value="Feu" />
 				</div>
-				<div class="sheet-contentinput"><input type="number" name="attr_feulvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectfeu" value="!aspect @{feuname}|@{feulvl}|?{Bonus (facultatif)|0}"></button></div>
+				<div class="sheet-contentinput"><input type="number" name="attr_feulvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectfeu" value="!qinaspect @{feuname}|@{feulvl}|?{Bonus (facultatif)|0}"></button></div>
 			</div>
 			<div class="sheet-content">
 				<div class="sheet-contentlabel">
 					&#26408; Bois :
 					<input type="hidden" name="attr_boisname" value="Bois" />
 				</div>
-				<div class="sheet-contentinput"><input type="number" name="attr_boislvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectbois" value="!aspect @{boisname}|@{boislvl}|?{Bonus (facultatif)|0}"></button></div>
+				<div class="sheet-contentinput"><input type="number" name="attr_boislvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectbois" value="!qinaspect @{boisname}|@{boislvl}|?{Bonus (facultatif)|0}"></button></div>
 			</div>
 			<div class="sheet-content">
 				<div class="sheet-contentlabel">
 					&#27700; Eau :
 					<input type="hidden" name="attr_eauname" value="Eau" />
 				</div>
-				<div class="sheet-contentinput"><input type="number" name="attr_eaulvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspecteau" value="!aspect @{eauname}|@{eaulvl}|?{Bonus (facultatif)|0}"></button></div>
+				<div class="sheet-contentinput"><input type="number" name="attr_eaulvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspecteau" value="!qinaspect @{eauname}|@{eaulvl}|?{Bonus (facultatif)|0}"></button></div>
 			</div>
 			<div class="sheet-content">
 				<div class="sheet-contentlabel">
 					&#37329; Métal :
 					<input type="hidden" name="attr_metalname" value="Métal" />
 				</div>
-				<div class="sheet-contentinput"><input type="number" name="attr_metallvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectmetal" value="!aspect @{metalname}|@{metallvl}|?{Bonus (facultatif)|0}"></button></div>
+				<div class="sheet-contentinput"><input type="number" name="attr_metallvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectmetal" value="!qinaspect @{metalname}|@{metallvl}|?{Bonus (facultatif)|0}"></button></div>
 			</div>
 			<div class="sheet-content">
 				<div class="sheet-contentlabel">
 					&#22303; Terre :
 					<input type="hidden" name="attr_terrename" value="Terre" />
 				</div>
-				<div class="sheet-contentinput"><input type="number" name="attr_terrelvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectterre" value="!aspect @{terrename}|@{terrelvl}|?{Bonus (facultatif)|0}"></button></div>
+				<div class="sheet-contentinput"><input type="number" name="attr_terrelvl" value="1" min="1" max="6" /><button type="roll" name="roll_raspectterre" value="!qinaspect @{terrename}|@{terrelvl}|?{Bonus (facultatif)|0}"></button></div>
 			</div>
 		</div>
 		<div class="sheet-titresspartie">Chi, Défense passive, Résistance</div>
@@ -293,7 +293,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rarchitecture" value="!skill @{boisname}|@{boislvl}|@{architecturename}|@{architecturelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rarchitecture" value="!qinskill @{boisname}|@{boislvl}|@{architecturename}|@{architecturelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -311,7 +311,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rbureaucratie" value="!skill @{boisname}|@{boislvl}|@{bureaucratiename}|@{bureaucratielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rbureaucratie" value="!qinskill @{boisname}|@{boislvl}|@{bureaucratiename}|@{bureaucratielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -329,7 +329,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rcalligraphie" value="!skill @{boisname}|@{boislvl}|@{calligraphiename}|@{calligraphielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rcalligraphie" value="!qinskill @{boisname}|@{boislvl}|@{calligraphiename}|@{calligraphielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -347,7 +347,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rherboristerie" value="!skill @{boisname}|@{boislvl}|@{herboristeriename}|@{herboristerielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rherboristerie" value="!qinskill @{boisname}|@{boislvl}|@{herboristeriename}|@{herboristerielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -365,7 +365,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rhistoire" value="!skill @{boisname}|@{boislvl}|@{histoirename}|@{histoirelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rhistoire" value="!qinskill @{boisname}|@{boislvl}|@{histoirename}|@{histoirelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -383,7 +383,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rinvestigation" value="!skill @{boisname}|@{boislvl}|@{investigationname}|@{investigationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rinvestigation" value="!qinskill @{boisname}|@{boislvl}|@{investigationname}|@{investigationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -401,7 +401,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rlitterature" value="!skill @{boisname}|@{boislvl}|@{litteraturename}|@{litteraturelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rlitterature" value="!qinskill @{boisname}|@{boislvl}|@{litteraturename}|@{litteraturelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -419,7 +419,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rloi" value="!skill @{boisname}|@{boislvl}|@{loiname}|@{loilvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rloi" value="!qinskill @{boisname}|@{boislvl}|@{loiname}|@{loilvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -437,7 +437,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rmedecine" value="!skill @{boisname}|@{boislvl}|@{medecinename}|@{medecinelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rmedecine" value="!qinskill @{boisname}|@{boislvl}|@{medecinename}|@{medecinelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -455,7 +455,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rnavigation" value="!skill @{boisname}|@{boislvl}|@{navigationname}|@{navigationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rnavigation" value="!qinskill @{boisname}|@{boislvl}|@{navigationname}|@{navigationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -473,7 +473,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rperception" value="!skill @{boisname}|@{boislvl}|@{perceptionname}|@{perceptionlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rperception" value="!qinskill @{boisname}|@{boislvl}|@{perceptionname}|@{perceptionlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -491,7 +491,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rsavoir" value="!skill @{boisname}|@{boislvl}|@{savoirname}|@{savoirlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rsavoir" value="!qinskill @{boisname}|@{boislvl}|@{savoirname}|@{savoirlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -509,7 +509,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rsciences" value="!skill @{boisname}|@{boislvl}|@{sciencesname}|@{scienceslvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rsciences" value="!qinskill @{boisname}|@{boislvl}|@{sciencesname}|@{scienceslvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 		</div>
@@ -531,7 +531,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rarts" value="!skill @{feuname}|@{feulvl}|@{artsname}|@{artslvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rarts" value="!qinskill @{feuname}|@{feulvl}|@{artsname}|@{artslvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -549,7 +549,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rcomedie" value="!skill @{feuname}|@{feulvl}|@{comediename}|@{comedielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rcomedie" value="!qinskill @{feuname}|@{feulvl}|@{comediename}|@{comedielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -567,7 +567,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rcommerce" value="!skill @{feuname}|@{feulvl}|@{commercename}|@{commercelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rcommerce" value="!qinskill @{feuname}|@{feulvl}|@{commercename}|@{commercelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -585,7 +585,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rdanse" value="!skill @{feuname}|@{feulvl}|@{dansename}|@{danselvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rdanse" value="!qinskill @{feuname}|@{feulvl}|@{dansename}|@{danselvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -603,7 +603,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rdiplomatie" value="!skill @{feuname}|@{feulvl}|@{diplomatiename}|@{diplomatielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rdiplomatie" value="!qinskill @{feuname}|@{feulvl}|@{diplomatiename}|@{diplomatielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -621,7 +621,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_reloquence" value="!skill @{feuname}|@{feulvl}|@{eloquencename}|@{eloquencelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_reloquence" value="!qinskill @{feuname}|@{feulvl}|@{eloquencename}|@{eloquencelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -639,7 +639,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_retiquette" value="!skill @{feuname}|@{feulvl}|@{etiquettename}|@{etiquettelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_retiquette" value="!qinskill @{feuname}|@{feulvl}|@{etiquettename}|@{etiquettelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -657,7 +657,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rheraldique" value="!skill @{feuname}|@{feulvl}|@{heraldiquename}|@{heraldiquelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rheraldique" value="!qinskill @{feuname}|@{feulvl}|@{heraldiquename}|@{heraldiquelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -675,7 +675,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rintimidation" value="!skill @{feuname}|@{feulvl}|@{intimidationname}|@{intimidationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rintimidation" value="!qinskill @{feuname}|@{feulvl}|@{intimidationname}|@{intimidationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -693,7 +693,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rjeux" value="!skill @{feuname}|@{feulvl}|@{jeuxname}|@{jeuxlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rjeux" value="!qinskill @{feuname}|@{feulvl}|@{jeuxname}|@{jeuxlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -711,7 +711,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rlangues" value="!skill @{feuname}|@{feulvl}|@{languesname}|@{langueslvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rlangues" value="!qinskill @{feuname}|@{feulvl}|@{languesname}|@{langueslvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -729,7 +729,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rmusique" value="!skill @{feuname}|@{feulvl}|@{musiquename}|@{musiquelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rmusique" value="!qinskill @{feuname}|@{feulvl}|@{musiquename}|@{musiquelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -747,7 +747,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rseduction" value="!skill @{feuname}|@{feulvl}|@{seductionname}|@{seductionlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rseduction" value="!qinskill @{feuname}|@{feulvl}|@{seductionname}|@{seductionlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 		</div>
@@ -768,7 +768,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_ralcexterne" value="!skill @{terrename}|@{terrelvl}|@{alcexternename}|@{alcexternelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_ralcexterne" value="!qinskill @{terrename}|@{terrelvl}|@{alcexternename}|@{alcexternelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -786,7 +786,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_ralcinterne" value="!skill @{terrename}|@{terrelvl}|@{alcinternename}|@{alcinternelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_ralcinterne" value="!qinskill @{terrename}|@{terrelvl}|@{alcinternename}|@{alcinternelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -804,7 +804,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rdivination" value="!skill @{terrename}|@{terrelvl}|@{divinationname}|@{divinationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rdivination" value="!qinskill @{terrename}|@{terrelvl}|@{divinationname}|@{divinationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -822,7 +822,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rempathie" value="!skill @{terrename}|@{terrelvl}|@{empathiename}|@{empathielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rempathie" value="!qinskill @{terrename}|@{terrelvl}|@{empathiename}|@{empathielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -840,7 +840,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rexorcisme" value="!skill @{terrename}|@{terrelvl}|@{exorcismename}|@{exorcismelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rexorcisme" value="!qinskill @{terrename}|@{terrelvl}|@{exorcismename}|@{exorcismelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -858,7 +858,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rlegendes" value="!skill @{terrename}|@{terrelvl}|@{legendesname}|@{legendeslvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rlegendes" value="!qinskill @{terrename}|@{terrelvl}|@{legendesname}|@{legendeslvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -876,7 +876,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rmeditation" value="!skill @{terrename}|@{terrelvl}|@{meditationname}|@{meditationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rmeditation" value="!qinskill @{terrename}|@{terrelvl}|@{meditationname}|@{meditationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -894,7 +894,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rtaoisme" value="!skill @{terrename}|@{terrelvl}|@{taoismename}|@{taoismelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rtaoisme" value="!qinskill @{terrename}|@{terrelvl}|@{taoismename}|@{taoismelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -912,7 +912,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rtheologie" value="!skill @{terrename}|@{terrelvl}|@{theologiename}|@{theologielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rtheologie" value="!qinskill @{terrename}|@{terrelvl}|@{theologiename}|@{theologielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 		</div>
@@ -933,7 +933,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rartguerre" value="!skill @{metalname}|@{metallvl}|@{artguerrename}|@{artguerrelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rartguerre" value="!qinskill @{metalname}|@{metallvl}|@{artguerrename}|@{artguerrelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -951,7 +951,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rbangshu" value="!skill @{metalname}|@{metallvl}|@{bangshuname}|@{bangshulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rbangshu" value="!qinskill @{metalname}|@{metallvl}|@{bangshuname}|@{bangshulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -969,7 +969,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rboxe" value="!skill @{metalname}|@{metallvl}|@{boxename}|@{boxelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rboxe" value="!qinskill @{metalname}|@{metallvl}|@{boxename}|@{boxelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -987,7 +987,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rchuishu" value="!skill @{metalname}|@{metallvl}|@{chuishuname}|@{chuishulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rchuishu" value="!qinskill @{metalname}|@{metallvl}|@{chuishuname}|@{chuishulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1005,7 +1005,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rdaoshu" value="!skill @{metalname}|@{metallvl}|@{daoshuname}|@{daoshulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rdaoshu" value="!qinskill @{metalname}|@{metallvl}|@{daoshuname}|@{daoshulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1023,7 +1023,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rdunshu" value="!skill @{metalname}|@{metallvl}|@{dunshuname}|@{dunshulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rdunshu" value="!qinskill @{metalname}|@{metallvl}|@{dunshuname}|@{dunshulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1041,7 +1041,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rgongshu" value="!skill @{metalname}|@{metallvl}|@{gongshuname}|@{gongshulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rgongshu" value="!qinskill @{metalname}|@{metallvl}|@{gongshuname}|@{gongshulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1059,7 +1059,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rimprovisation" value="!skill @{metalname}|@{metallvl}|@{improvisationname}|@{improvisationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rimprovisation" value="!qinskill @{metalname}|@{metallvl}|@{improvisationname}|@{improvisationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1077,7 +1077,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rjianshu" value="!skill @{metalname}|@{metallvl}|@{jianshuname}|@{jianshulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rjianshu" value="!qinskill @{metalname}|@{metallvl}|@{jianshuname}|@{jianshulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1095,7 +1095,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rlancer" value="!skill @{metalname}|@{metallvl}|@{lancername}|@{lancerlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rlancer" value="!qinskill @{metalname}|@{metallvl}|@{lancername}|@{lancerlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1113,7 +1113,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rqiangshu" value="!skill @{metalname}|@{metallvl}|@{qiangshuname}|@{qiangshulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rqiangshu" value="!qinskill @{metalname}|@{metallvl}|@{qiangshuname}|@{qiangshulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1131,7 +1131,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rnushu" value="!skill @{metalname}|@{metallvl}|@{nushuname}|@{nushulvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rnushu" value="!qinskill @{metalname}|@{metallvl}|@{nushuname}|@{nushulvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 		</div>
@@ -1152,7 +1152,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_racrobatie" value="!skill @{eauname}|@{eaulvl}|@{acrobatiename}|@{acrobatielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_racrobatie" value="!qinskill @{eauname}|@{eaulvl}|@{acrobatiename}|@{acrobatielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1170,7 +1170,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rartisanat" value="!skill @{eauname}|@{eaulvl}|@{artisanatname}|@{artisanatlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rartisanat" value="!qinskill @{eauname}|@{eaulvl}|@{artisanatname}|@{artisanatlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1188,7 +1188,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rdiscretion" value="!skill @{eauname}|@{eaulvl}|@{discretionname}|@{discretionlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rdiscretion" value="!qinskill @{eauname}|@{eaulvl}|@{discretionname}|@{discretionlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1206,7 +1206,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_requitation" value="!skill @{eauname}|@{eaulvl}|@{equitationname}|@{equitationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_requitation" value="!qinskill @{eauname}|@{eaulvl}|@{equitationname}|@{equitationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1224,7 +1224,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rescalade" value="!skill @{eauname}|@{eaulvl}|@{escaladename}|@{escaladelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rescalade" value="!qinskill @{eauname}|@{eaulvl}|@{escaladename}|@{escaladelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1242,7 +1242,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_resquive" value="!skill @{eauname}|@{eaulvl}|@{esquivename}|@{esquivelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_resquive" value="!qinskill @{eauname}|@{eaulvl}|@{esquivename}|@{esquivelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1260,7 +1260,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rforge" value="!skill @{eauname}|@{eaulvl}|@{forgename}|@{forgelvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rforge" value="!qinskill @{eauname}|@{eaulvl}|@{forgename}|@{forgelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1278,7 +1278,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rlarcins" value="!skill @{eauname}|@{eaulvl}|@{larcinsname}|@{larcinslvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rlarcins" value="!qinskill @{eauname}|@{eaulvl}|@{larcinsname}|@{larcinslvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1296,7 +1296,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rnatation" value="!skill @{eauname}|@{eaulvl}|@{natationname}|@{natationlvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rnatation" value="!qinskill @{eauname}|@{eaulvl}|@{natationname}|@{natationlvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1314,7 +1314,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <button type="roll" name="roll_rsurvie" value="!skill @{eauname}|@{eaulvl}|@{surviename}|@{survielvl}|?{Bonus (facultatif)|0}"></button>
+                    <button type="roll" name="roll_rsurvie" value="!qinskill @{eauname}|@{eaulvl}|@{surviename}|@{survielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 		</div>
@@ -1386,7 +1386,7 @@
 							<option value="@{qiangshuname}|@{qiangshulvl}">Qiangshù</option>
 							<option value="@{nushuname}|@{nushulvl}">Nushù</option>
 						</select>
-						<button type="roll" name="roll_rattaque" value="!attack @{metalname}|@{metallvl}|@{armecomp}|?{Bonus (facultatif)|0}|@{armenom}|@{armedgt}"></button>
+						<button type="roll" name="roll_rattaque" value="!qinattack @{metalname}|@{metallvl}|@{armecomp}|?{Bonus (facultatif)|0}|@{armenom}|@{armedgt}"></button>
 					</div>
 				</div>
 				<div class="sheet-content">
@@ -1497,7 +1497,7 @@
 							<option value="@{divinationname}|@{divinationlvl}">Divination</option>
 							<option value="@{exorcismename}|@{exorcismelvl}">Exorcisme</option>
 						</select>
-						<button type="roll" name="roll_rmagie" value="!magic @{terrename}|@{terrelvl}|@{magiecomp}|?{Bonus (facultatif)|0}|@{magienom}"></button>
+						<button type="roll" name="roll_rmagie" value="!qinmagic @{terrename}|@{terrelvl}|@{magiecomp}|?{Bonus (facultatif)|0}|@{magienom}"></button>
 					</div>
 				</div>
 				<div class="sheet-content">
