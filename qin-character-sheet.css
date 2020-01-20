@@ -1,5 +1,5 @@
 .sheet-wrapper {
-	min-width: 750px;
+	min-width: 800px;
 	max-width: 1200px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -7,9 +7,29 @@
 	grid-template-areas: "a";
 	grid-gap: 5px;
 	grid-auto-columns: auto;
-	background: url('https://nsa40.casimages.com/img/2020/01/17/200117010111865143.jpg') repeat top center;
+	background: url('https://raw.githubusercontent.com/JerryCow33/roll20-qin-fr-character-sheet/JerryCow33-patch-1/images/fond_qin.jpg') repeat top center;
 	color: #1f1304;
 	padding: 5px;
+}
+
+.sheet-header {
+    background: url('https://raw.githubusercontent.com/JerryCow33/roll20-qin-fr-character-sheet/JerryCow33-patch-1/images/qinfond.png') repeat-x left;
+    height:100px;
+    margin:0px;
+    padding:0px;
+	display: flex;
+	align-items: center;
+}
+
+.sheet-logo {
+    height:100px;
+    margin:0px;
+}
+
+.sheet-titre {
+    font-size:48px;
+    font-weight:bold;
+    /*-webkit-text-stroke: 1px white;*/
 }
 
 .sheet-titrepartie {
@@ -129,6 +149,101 @@
 	flex-direction: column;
 }
 
+.sheet-contentblocprotection {
+	display: grid;
+	grid-template-areas: "a a a";
+	grid-auto-columns: 33.33%;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentblocprotection .sheet-content {
+	flex-direction: column;
+}
+
+.sheet-contentblocarmesname {
+	display: grid;
+	grid-template-columns: 28% 20% 10% 10% 8% 8% 8% 8%;
+	grid-template-areas: "a a a a a a a a";
+	/*grid-auto-columns: 33.33%;*/
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentblocarmes {
+	display: grid;
+	grid-template-columns: 28% 20% 10% 10% 8% 8% 8% 8%;
+	grid-template-areas: "a a a a a a a a";
+	/*grid-auto-columns: 33.33%;*/
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentblocarmes .sheet-contentinput select {
+	width:100px;
+}
+
+.sheet-contentblocarmes .sheet-contentinput input {
+	width:100%;
+}
+
+.sheet-contentarmemanoeuvre {
+	grid-column-start: 1;
+	grid-column-end: end;
+}
+
+.sheet-contentbloctaosname {
+	display: grid;
+	grid-template-columns: 30% 10% auto;
+	grid-template-areas: "a a a";
+	/*grid-auto-columns: 33.33%;*/
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentbloctaos {
+	display: grid;
+	grid-template-columns: 30% 10% auto;
+	grid-template-areas: "a a a";
+	/*grid-auto-columns: 33.33%;*/
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentbloctaos .sheet-contentinput select {
+	width:100px;
+}
+
+.sheet-contentbloctaos .sheet-contentinput input {
+	width:100%;
+}
+
+.sheet-contentblocmagiename {
+	display: grid;
+	grid-template-columns: 30% 20% 10% auto;
+	grid-template-areas: "a a a a";
+	/*grid-auto-columns: 33.33%;*/
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentblocmagie {
+	display: grid;
+	grid-template-columns: 30% 20% 10% auto;
+	grid-template-areas: "a a a a";
+	/*grid-auto-columns: 33.33%;*/
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.sheet-contentblocmagie .sheet-contentinput select {
+	width:100px;
+}
+
+.sheet-contentblocmagie .sheet-contentinput input {
+	width:100%;
+}
+
 .sheet-content {
 	border:1px solid #1f1304;
 	padding: 10px;
@@ -149,15 +264,17 @@
 }
 
 .sheet-contentinput textarea {
-	width:100%;
+	width:97%;
+	height:3em;
+	margin-bottom:0px;
 }
 
 .sheet-twodigits {
-	width:50px;
+	width:40px !important;
 }
 
 .sheet-fieldset {
 	margin:0px;
 	padding:0px;
-	border:0px;
+	border:none;
 }

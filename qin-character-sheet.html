@@ -1,4 +1,8 @@
 <div class="sheet-wrapper">
+    <div class="sheet-header">
+        <img class="sheet-logo" src="https://raw.githubusercontent.com/JerryCow33/roll20-qin-fr-character-sheet/JerryCow33-patch-1/images/qinlogo.png" border="0" />
+        <div class="sheet-titre">Fiche de personnage</div>
+    </div>    
 	<div class="sheet-titrepartie">Biographie</div>
 	<div class="sheet-titrepartie sheet-contentwrapper">
 		<div class="sheet-titresspartie">Identité</div>
@@ -176,12 +180,16 @@
 		</div>
 		<div class="sheet-contentbloc sheet-contentblocidentite5">
 			<div class="sheet-content">
-				<div class="sheet-contentlabel">Faits Marquants :</div>
-				<div class="sheet-contentinput"><textarea name="attr_faitsmarquants" class="sheet-textareawidth" rows="5"></textarea></div>
+				<div class="sheet-contentinput">
+    				<div class="sheet-contentlabel">Faits Marquants :</div>
+				    <textarea name="attr_faitsmarquants" class="sheet-textareawidth" rows="5"></textarea>
+				</div>
 			</div>
 			<div class="sheet-content">
-				<div class="sheet-contentlabel">Equipement :</div>
-				<div class="sheet-contentinput"><textarea name="attr_equipement" class="sheet-textareawidth" rows="5"></textarea></div>
+				<div class="sheet-contentinput">
+    				<div class="sheet-contentlabel">Equipement :</div>
+				    <textarea name="attr_equipement" class="sheet-textareawidth" rows="5"></textarea>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -272,38 +280,38 @@
 		<div class="sheet-contentbloc sheet-contentbloctalents">
 			<div class="sheet-content">
 				<div class="sheet-contentlabel">
-          <span name="attr_architecturename">Architecture</span>
-          <input type="hidden" name="attr_architecturename" value="Architecture" />
-        </div>
+                	<span name="attr_architecturename">Architecture</span>
+                    <input type="hidden" name="attr_architecturename" value="Architecture" />
+                </div>
 				<div class="sheet-contentinput">
-          <select name="attr_architecturelvl" class="sheet-twodigits">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-          </select>
-          <button type="roll" name="roll_rarchitecture" value="!skill @{boisname}|@{boislvl}|@{architecturename}|@{architecturelvl}|?{Bonus (facultatif)|0}"></button>
+                    <select name="attr_architecturelvl" class="sheet-twodigits">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button type="roll" name="roll_rarchitecture" value="!skill @{boisname}|@{boislvl}|@{architecturename}|@{architecturelvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
 				<div class="sheet-contentlabel">
-          <span name="attr_bureaucratiename">Bureaucratie</span>
-          <input type="hidden" name="attr_bureaucratiename" value="Bureaucratie" />
-        </div>
+                	<span name="attr_bureaucratiename">Bureaucratie</span>
+                    <input type="hidden" name="attr_bureaucratiename" value="Bureaucratie" />
+                </div>
 				<div class="sheet-contentinput">
-          <select name="attr_bureaucratielvl" class="sheet-twodigits">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-          </select>
-          <button type="roll" name="roll_rbureaucratie" value="!skill @{boisname}|@{boislvl}|@{bureaucratiename}|@{bureaucratielvl}|?{Bonus (facultatif)|0}"></button>
+                    <select name="attr_bureaucratielvl" class="sheet-twodigits">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button type="roll" name="roll_rbureaucratie" value="!skill @{boisname}|@{boislvl}|@{bureaucratiename}|@{bureaucratielvl}|?{Bonus (facultatif)|0}"></button>
 				</div>
 			</div>
 			<div class="sheet-content">
@@ -1311,4 +1319,203 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="sheet-titrepartie">Armes et protections</div>
+	<div class="sheet-titrepartie sheet-contentwrapper">
+		<div class="sheet-titresspartie">Protection</div>
+		<div class="sheet-contentbloc sheet-contentblocprotection">
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Armure</div>
+				<div class="sheet-contentinput"><input type="text" name="attr_armure" /></div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Protection</div>
+				<div class="sheet-contentinput"><input type="number" name="attr_protection" value="0" min="0" max="99" /></div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Solidité</div>
+				<div class="sheet-contentinput"><input type="number" name="attr_resarmure" value="0" min="0" max="99" /></div>
+			</div>
+		</div>
+		<div class="sheet-titresspartie">Armes</div>
+		<div class="sheet-contentbloc sheet-contentblocarmesname">
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Arme</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Comp</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Dgt</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Res</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">PC</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">PM</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">PL</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">PE</div>
+			</div>
+		</div>
+		<fieldset class="repeating_equiparmes sheet-fieldset">
+			<div class="sheet-contentbloc sheet-contentblocarmes">
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_armenom" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<select name="attr_armecomp">
+							<option value="@{bangshuname}|@{bangshulvl}">Bangshù</option>
+							<option value="@{boxename}|@{boxelvl}">Boxe/lutte</option>
+							<option value="@{chuishuname}|@{chuishulvl}">Chuishù</option>
+							<option value="@{daoshuname}|@{daoshulvl}">Daoshù</option>
+							<option value="@{dunshuname}|@{dunshulvl}">Dùnshù</option>
+							<option value="@{gongshuname}|@{gongshulvl}">Gongshù</option>
+							<option value="@{improvisationname}|@{improvisationlvl}">Improvisation</option>
+							<option value="@{jianshuname}|@{jianshulvl}">Jiànshù</option>
+							<option value="@{lancername}|@{lancerlvl}">Lancer</option>
+							<option value="@{qiangshuname}|@{qiangshulvl}">Qiangshù</option>
+							<option value="@{nushuname}|@{nushulvl}">Nushù</option>
+						</select>
+						<button type="roll" name="roll_rattaque" value="!attack @{metalname}|@{metallvl}|@{armecomp}|?{Bonus (facultatif)|0}|@{armenom}|@{armedgt}"></button>
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="number" name="attr_armedgt" value="0" min="0" max="99" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="number" name="attr_armeres" value="0" min="0" max="99" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_armepc" class="sheet-twodigits" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_armepm" class="sheet-twodigits" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_armepl" class="sheet-twodigits" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_armepe" class="sheet-twodigits" />
+					</div>
+				</div>
+				<div class="sheet-content sheet-contentarmemanoeuvre">
+					<div class="sheet-contentinput">
+    					<div class="sheet-contentlabel">Manoeuvre :</div>
+						<textarea name="attr_armemanoeuvres" rows="2"></textarea>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="sheet-titrepartie">Taos et magie</div>
+	<div class="sheet-titrepartie sheet-contentwrapper">
+		<div class="sheet-titresspartie">Taos</div>
+		<div class="sheet-contentbloc sheet-contentbloctaosname">
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Tao</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Niveau</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Effet</div>
+			</div>
+		</div>
+		<fieldset class="repeating_taos sheet-fieldset">
+			<div class="sheet-contentbloc sheet-contentbloctaos">
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_taonom" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<select name="attr_taolvl" class="sheet-twodigits">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<textarea name="attr_taoeffet"></textarea>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+		<div class="sheet-titresspartie">Magie</div>
+		<div class="sheet-contentbloc sheet-contentblocmagiename">
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Sort</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Compétence</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Niveau</div>
+			</div>
+			<div class="sheet-content">
+				<div class="sheet-contentlabel">Effet</div>
+			</div>
+		</div>
+		<fieldset class="repeating_equiparmes sheet-fieldset">
+			<div class="sheet-contentbloc sheet-contentblocmagie">
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<input type="text" name="attr_magienom" />
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<select name="attr_magiecomp">
+							<option value="@{alcexternename}|@{alcexternelvl}">Alchimie externe</option>
+							<option value="@{alcinternename}|@{alcinternelvl}">Alchimie externe</option>
+							<option value="@{divinationname}|@{divinationlvl}">Divination</option>
+							<option value="@{exorcismename}|@{exorcismelvl}">Exorcisme</option>
+						</select>
+						<button type="roll" name="roll_rmagie" value="!magic @{terrename}|@{terrelvl}|@{magiecomp}|?{Bonus (facultatif)|0}|@{magienom}"></button>
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<select name="attr_magielvl" class="sheet-twodigits">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</div>
+				</div>
+				<div class="sheet-content">
+					<div class="sheet-contentinput">
+						<textarea name="attr_magieeffet"></textarea>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</div>	
 </div>
