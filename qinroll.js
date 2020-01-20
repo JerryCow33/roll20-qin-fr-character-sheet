@@ -15,9 +15,16 @@ on('chat:message', function(msg) {
 	tabArgs.shift();
 	log("Commande : " + command);
 	
-	if(arrayOfCommands.indexOf(command) == -1 && command != "power")
+	if(arrayOfCommands.indexOf(command) == -1)
 	{
-        log("ERREUR : mauvaise commande !");
+	    if(command === "power")
+	    {
+            log("Commande 'power' lancée via PowerCards.js !");
+	    }
+	    else
+	    {
+            log("ERREUR : mauvaise commande !");
+	    }
 	}
 	else
 	{
@@ -35,10 +42,8 @@ on('chat:message', function(msg) {
                 characterid: currentChar.get("_id"),
                 _type: "attribute"
             })[0]; 
-            //log(JSON.stringify(chi, null, "  "));
             log(chi.get("name") + " , " + chi.get("current") + " / " + chi.get("max"));
             log("== CHARACTER ==\nName : " + currentChar.get('name') + "\nActual Chi : " + chi.get("current") + "\nChi max : " + chi.get("max"));
-            //return;
         } 
 	}
 	
@@ -187,8 +192,6 @@ on('chat:message', function(msg) {
         				    var resultMessage = "";
         				    var totalYin = parseInt(fmsg[0].inlinerolls["0"].results.total - 1, 10);
         				    var totalYang = parseInt(fmsg[0].inlinerolls["1"].results.total - 1, 10);
-        				    //var totalYin = 5;
-        				    //var totalYang = totalYin;
         				    var tabAspectColor = {
         				        "Bois" : "#a06a0a",
         				        "Feu": "#c81b1d",
@@ -385,7 +388,6 @@ on('chat:message', function(msg) {
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 7)
 			        {
-						//!attack @{metalname}|@{metallvl}|@{armecomp}|?{Bonus (facultatif)|0}|@{armenom}||@{armedgt}
 			            var aspectName = tabAspectSkill[0];
 			            var aspectLvl = parseInt(tabAspectSkill[1], 10);
 			            var skillName = tabAspectSkill[2];
