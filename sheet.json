@@ -1,0 +1,8 @@
+{
+    "html": "qin-character-sheet.html",
+    "css": "qin-character-sheet.css",
+    "authors": "Lionel Coutreau AKA JerryCow",
+    "roll20userid": "4991851",
+    "preview": "sheet-capture.jpg",
+    "instructions": "Requires PowerCards.js and custom API script qinroll.js"
+}
