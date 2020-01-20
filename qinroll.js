@@ -5,7 +5,7 @@ on("ready", function() {
 on('chat:message', function(msg) {
     if(msg.type != 'api' || msg.content.indexOf('!')) return;
     
-    var arrayOfCommands = ["skill", "aspect", "attack", "magic"];
+    var arrayOfCommands = ["qinskill", "qinaspect", "qinattack", "qinmagic"];
     var chi;
     var characters = findObjs({_type: 'character'});
     var currentChar;
@@ -43,7 +43,7 @@ on('chat:message', function(msg) {
 	}
 	
 	switch(command){
-		case "skill":
+		case "qinskill":
 			if(tabArgs.length > 0)
 			{
 			    var arg = tabArgs.join(" ");
@@ -158,7 +158,7 @@ on('chat:message', function(msg) {
 				sendChat("System", "ERREUR : vous n'avez pas fourni d'arguments pour le lancer !");
 			}
 			break;
-		case "magic":
+		case "qinmagic":
 			if(tabArgs.length > 0)
 			{
 			    var arg = tabArgs.join(" ");
@@ -276,7 +276,7 @@ on('chat:message', function(msg) {
 				sendChat("System", "ERREUR : vous n'avez pas fourni d'arguments pour le lancer !");
 			}
 			break;
-		case "aspect":
+		case "qinaspect":
 			if(tabArgs.length > 0)
 			{
 			    var arg = tabArgs.join(" ");
@@ -375,7 +375,7 @@ on('chat:message', function(msg) {
 				sendChat("System", "ERREUR : vous n'avez pas fourni d'arguments pour le lancer !");
 			}
 			break;
-		case "attack":
+		case "qinattack":
 			if(tabArgs.length > 0)
 			{
 			    var arg = tabArgs.join(" ");
