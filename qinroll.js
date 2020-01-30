@@ -7,7 +7,10 @@ on('chat:message', function(msg) {
     
     var arrayOfCommands = ["qinskill", "qinaspect", "qinattack", "qinmagic"];
     var chi;
-    var characters = findObjs({_type: 'character'});
+    var characters = findObjs({
+        _type: 'character',
+        name: msg.who
+    });
     var currentChar;
 	var tabMsgContent = msg.content.substring(1).split(" ");
 	var command = tabMsgContent[0];
@@ -28,22 +31,19 @@ on('chat:message', function(msg) {
 	}
 	else
 	{
-        var chrIndexFound = characters.findIndex(chr => chr.get('name') === msg.who);
-        if(chrIndexFound == -1)
+        if(characters.length == 0)
         {
             log("ERREUR : problème de personnage !");
         }
         else
         {
-            log("Character found !");
-            currentChar = characters[chrIndexFound];
+            currentChar = characters[0];
+            log("Character found : " + currentChar.get("name"));
             chi = findObjs({                              
                 name: "chi",
                 characterid: currentChar.get("_id"),
                 _type: "attribute"
             })[0]; 
-            log(chi.get("name") + " , " + chi.get("current") + " / " + chi.get("max"));
-            log("== CHARACTER ==\nName : " + currentChar.get('name') + "\nActual Chi : " + chi.get("current") + "\nChi max : " + chi.get("max"));
         } 
 	}
 	
@@ -54,7 +54,6 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
-			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 5)
 			        {
@@ -169,7 +168,6 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
-			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 6)
 			        {
@@ -285,7 +283,6 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
-			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 3)
 			        {
@@ -384,7 +381,6 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
-			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 7)
 			        {
