@@ -31,19 +31,26 @@ on('chat:message', function(msg) {
 	}
 	else
 	{
+        //var chrIndexFound = characters.findIndex(chr => chr.get('name') === msg.who);
         if(characters.length == 0)
+        //if(chrIndexFound == -1)
         {
             log("ERREUR : problème de personnage !");
         }
         else
         {
+            log("Character found !");
+            //currentChar = characters[chrIndexFound];
             currentChar = characters[0];
-            log("Character found : " + currentChar.get("name"));
+            log("currentChar : " + JSON.stringify( currentChar ));
+            log("currentChar ID : " + currentChar.get("name"));
             chi = findObjs({                              
                 name: "chi",
                 characterid: currentChar.get("_id"),
                 _type: "attribute"
             })[0]; 
+            log(chi.get("name") + " , " + chi.get("current") + " / " + chi.get("max"));
+            log("== CHARACTER ==\nName : " + currentChar.get('name') + "\nActual Chi : " + chi.get("current") + "\nChi max : " + chi.get("max"));
         } 
 	}
 	
@@ -54,6 +61,7 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
+			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 5)
 			        {
@@ -89,6 +97,7 @@ on('chat:message', function(msg) {
                             resultMessage += " --name|Test de compétence";
                             resultMessage += " --leftsub|" + skillName;
                             resultMessage += " --rightsub|" + aspectName;
+                            resultMessage += " --Joueur:|" + msg.who;
                             resultMessage += " --Niveau d'Aspect:|[! " + aspectLvl + " !]";
                             resultMessage += " --Niveau de compétence:|[! " + skillLvl + " !]";
                             resultMessage += " --Bonus:|[! " + bonus + " !]";
@@ -168,6 +177,7 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
+			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 6)
 			        {
@@ -204,6 +214,7 @@ on('chat:message', function(msg) {
                             resultMessage += " --name|Test de magie";
                             resultMessage += " --leftsub|" + magicName;
                             resultMessage += " --rightsub|" + skillName;
+                            resultMessage += " --Joueur:|" + msg.who;
                             resultMessage += " --Niveau de " + aspectName + ":|[! " + aspectLvl + " !]";
                             resultMessage += " --Niveau de " + skillName + ":|[! " + skillLvl + " !]";
                             resultMessage += " --Bonus:|[! " + bonus + " !]";
@@ -283,6 +294,7 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
+			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 3)
 			        {
@@ -294,6 +306,8 @@ on('chat:message', function(msg) {
         				    var resultMessage = "";
         				    var totalYin = parseInt(fmsg[0].inlinerolls["0"].results.total - 1, 10);
         				    var totalYang = parseInt(fmsg[0].inlinerolls["1"].results.total - 1, 10);
+        				    //var totalYin = 0;
+        				    //var totalYang = totalYin;
         				    var tabAspectColor = {
         				        "Bois" : "#a06a0a",
         				        "Feu": "#c81b1d",
@@ -307,6 +321,7 @@ on('chat:message', function(msg) {
                             resultMessage += " --bgcolor|" + tabAspectColor[aspectName];
                             resultMessage += " --name|Test d'Aspect";
                             resultMessage += " --leftsub|" + aspectName;
+                            resultMessage += " --Joueur:|" + msg.who;
                             resultMessage += " --Niveau d'Aspect:|[! " + aspectLvl + " !]";
                             resultMessage += " --Bonus:|[! " + bonus + " !]";
                             resultMessage += " --Yin:|[! " + totalYin + " !]";
@@ -381,6 +396,7 @@ on('chat:message', function(msg) {
 			    var arg = tabArgs.join(" ");
 			    if(arg != "")
 			    {
+			        log(arg);
 			        var tabAspectSkill = arg.split("|");
 			        if(tabAspectSkill.length == 7)
 			        {
@@ -418,6 +434,7 @@ on('chat:message', function(msg) {
                             resultMessage += " --name|Test d'Attaque";
                             resultMessage += " --leftsub|Arme";
                             resultMessage += " --rightsub|" + weaponName;
+                            resultMessage += " --Joueur:|" + msg.who;
                             resultMessage += " --Dégâts de l'arme:|[! " + weaponDgt + " !]";
 							resultMessage += " --Niveau de Métal:|[! " + aspectLvl + " !]";
                             resultMessage += " --Niveau de " + skillName + ":|[! " + skillLvl + " !]";
