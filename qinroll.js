@@ -6,12 +6,18 @@ on('chat:message', function(msg) {
     if(msg.type != 'api' || msg.content.indexOf('!')) return;
     
     var arrayOfCommands = ["qinskill", "qinaspect", "qinattack", "qinmagic"];
-    var chi;
-    var characters = findObjs({
-        _type: 'character',
-        name: msg.who
-    });
-    var currentChar;
+	
+	/*var player = findObjs({
+		_type: 'player',
+		_id: msg.type
+	});
+	chi = findObjs({                              
+		name: "chi",
+		characterid: currentChar.get("_id"),
+		_type: "attribute"
+	})[0]; 
+	*/
+	
 	var tabMsgContent = msg.content.substring(1).split(" ");
 	var command = tabMsgContent[0];
 	var tabArgs = tabMsgContent;
@@ -28,30 +34,6 @@ on('chat:message', function(msg) {
 	    {
             log("ERREUR : mauvaise commande !");
 	    }
-	}
-	else
-	{
-        //var chrIndexFound = characters.findIndex(chr => chr.get('name') === msg.who);
-        if(characters.length == 0)
-        //if(chrIndexFound == -1)
-        {
-            log("ERREUR : problème de personnage !");
-        }
-        else
-        {
-            log("Character found !");
-            //currentChar = characters[chrIndexFound];
-            currentChar = characters[0];
-            log("currentChar : " + JSON.stringify( currentChar ));
-            log("currentChar ID : " + currentChar.get("name"));
-            chi = findObjs({                              
-                name: "chi",
-                characterid: currentChar.get("_id"),
-                _type: "attribute"
-            })[0]; 
-            log(chi.get("name") + " , " + chi.get("current") + " / " + chi.get("max"));
-            log("== CHARACTER ==\nName : " + currentChar.get('name') + "\nActual Chi : " + chi.get("current") + "\nChi max : " + chi.get("max"));
-        } 
 	}
 	
 	switch(command){
@@ -108,28 +90,10 @@ on('chat:message', function(msg) {
                                 var newChiVal = 0;
                                 if(totalYin == 0)
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") - 5;
-                                        if(newChiVal < 0)
-                                        {
-                                            newChiVal = 0;
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat|Echec critique - Vous échouez lamentablement et perdez 5 points de Chi.";
                                 }
                                 else
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") + totalYin;
-                                        if(newChiVal > chi.get("max"))
-                                        {
-                                            newChiVal = chi.get("max");
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat|Succès critique - Votre Yin et votre Yang sont en équilibre ! Vous regagnez " + totalYin + " points de Chi.";
                                 }
                             }
@@ -225,28 +189,10 @@ on('chat:message', function(msg) {
                                 var newChiVal = 0;
                                 if(totalYin == 0)
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") - 5;
-                                        if(newChiVal < 0)
-                                        {
-                                            newChiVal = 0;
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat|Echec critique - Vous échouez lamentablement et perdez 5 points de Chi.";
                                 }
                                 else
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") + totalYin;
-                                        if(newChiVal > chi.get("max"))
-                                        {
-                                            newChiVal = chi.get("max");
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat|Succès critique - Votre Yin et votre Yang sont en équilibre ! Vous regagnez " + totalYin + " points de Chi.";
                                 }
                             }
@@ -331,28 +277,10 @@ on('chat:message', function(msg) {
                                 var newChiVal = 0;
                                 if(totalYin == 0)
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") - 5;
-                                        if(newChiVal < 0)
-                                        {
-                                            newChiVal = 0;
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat:|Echec critique - Vous échouez lamentablement et perdez 5 points de Chi.";
                                 }
                                 else
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") + totalYin;
-                                        if(newChiVal > chi.get("max"))
-                                        {
-                                            newChiVal = chi.get("max");
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat:|Succès critique - Votre Yin et votre Yang sont en équilibre ! Vous regagnez " + totalYin + " points de Chi.";
                                 }
                             }
@@ -446,28 +374,10 @@ on('chat:message', function(msg) {
                                 var newChiVal = 0;
                                 if(totalYin == 0)
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") - 5;
-                                        if(newChiVal < 0)
-                                        {
-                                            newChiVal = 0;
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat|Echec critique - Vous échouez lamentablement et perdez 5 points de Chi.";
                                 }
                                 else
                                 {
-                                    if(currentChar)
-                                    {
-                                        newChiVal = chi.get("current") + totalYin;
-                                        if(newChiVal > chi.get("max"))
-                                        {
-                                            newChiVal = chi.get("max");
-                                        }
-                                        chi.set("current", newChiVal);
-                                    }
                                     resultMessage += " --Résultat|Succès critique - Votre Yin et votre Yang sont en équilibre ! Vous regagnez " + totalYin + " points de Chi.";
 									var degats = totalYin + aspectLvl + weaponDgt;
 									resultMessage += " --Dégâts:|" + totalYin + " + " + aspectLvl + " + " + weaponDgt + " = [! " + degats + " !] points de dégâts infligés.";
